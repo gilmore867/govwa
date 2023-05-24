@@ -32,7 +32,7 @@ jobs:
       
       - name: package (zip)
         run: |
-          mkdir -p "app" && cp -r ./app
+          mkdir ./app && cp -r ./ ./app
           zip -r govwa.zip ./app -x *.git/*
       
       - name: List files in the repository
