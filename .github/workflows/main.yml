@@ -32,7 +32,7 @@ jobs:
       
       - uses: vimtor/action-zip@v1
         with:
-          files: '**/*.zip'
+          files: '**/*.*'
           dest: govwa.zip
       
       - name: List files in the repository
