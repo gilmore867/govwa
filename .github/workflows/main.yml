@@ -30,10 +30,8 @@ jobs:
           go-version: '1.20' # The Go version to download (if necessary) and use.
       - run: go mod vendor
       
-      - uses: vimtor/action-zip@v1
-        with:
-          files: '**/*.*'
-          dest: govwa.zip
+      - name: package (zip)
+        run: zip -r govwa.zip ./ -x *.git/*
       
       - name: List files in the repository
         run: |
