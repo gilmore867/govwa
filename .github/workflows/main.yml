@@ -39,7 +39,7 @@ jobs:
       - uses: actions/upload-artifact@v2 # Copy files from repository to docker container so the next uploadandscan action can access them.
         with:
           name: CodePackage
-          path: '**/*.zip' # Wildcards can be used to filter the files copied into the container. See: https://github.com/actions/upload-artifact
+          path: 'govwa.zip' # Wildcards can be used to filter the files copied into the container. See: https://github.com/actions/upload-artifact
 
       - uses: veracode/veracode-uploadandscan-action@master # Run the uploadandscan action. Inputs are described above.
         with:
@@ -74,7 +74,7 @@ jobs:
             uses: veracode/veracode-sca@v1.09
             with:
               github_token: ${{ secrets.GITHUB_TOKEN }}
-              path: "./app"
+              path: "./"
               create-issues: false       
       
 
