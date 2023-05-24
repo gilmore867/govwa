@@ -32,8 +32,8 @@ jobs:
       
       - name: package (zip)
         run: |
-          mkdir app; find ./ -mindepth 1 -maxdepth 1 -exec cp -r -t ./app {} +
-          zip -r govwa.zip ./app -x *.git/*
+          mkdir ../app; find ./ -mindepth 1 -maxdepth 1 -exec cp -r -t ../app {} +
+          zip -r govwa.zip ../app -x *.git/*
       
       - name: List files in the repository
         run: |
